@@ -14,19 +14,11 @@ public class Carte {
 		valeur = minVal + (int)(Math.random() * ((maxVal - minVal) + 1));
 		
 		// Initialisation de couleur
-		int minCouleur = 1;
-		int maxCouleur = 4;
+		int minCouleur = 0;
+		int maxCouleur = 3;
+		char[] lesCouleurs = new char[]{'♦', '♣', '♥', '♠'};
 		int c = minCouleur + (int)(Math.random() * ((maxCouleur - minCouleur) + 1));
-		switch (c) {
-			case 1: couleur = '♦';
-					break;
-			case 2: couleur = '♣';
-					break;
-			case 3: couleur = '♥';
-					break;
-			case 4: couleur = '♠';
-					break;
-		}
+		couleur = lesCouleurs[c];
 	}
 
 	public Carte(char couleur, int valeur) {
